@@ -4,8 +4,7 @@ Onchain Aggregator is a Go package that implements queries for uniswapV2, as def
 [uniswapV2 API reference](https://docs.uniswap.org/contracts/v2/reference/API/queries)
 ## About The Graph
 
-The Graph is a decentralized protocol for indexing and querying blockchain data. The Graph makes it possible to query data that is difficult to query directly. Projects with complex smart contracts like Uniswap store data on the Ethereum blockchain, making it really difficult to read anything other than basic data directly from the blockchain.
-Reference: [The Graph](https://thegraph.com/docs/en/about/)
+[The Graph](https://thegraph.com/docs/en/about/) is a decentralized protocol for indexing and querying blockchain data. The Graph makes it possible to query data that is difficult to query directly. Projects with complex smart contracts like Uniswap store data on the Ethereum blockchain, making it really difficult to read anything other than basic data directly from the blockchain.
 The Graph solves this with a decentralized protocol that indexes and enables the performant and efficient querying of blockchain data. These APIs (indexed "subgraphs") can then be queried with a standard GraphQL API.
 
 ## Functions
@@ -30,7 +29,7 @@ Onchain Aggregator provides the following functions, which implement queries def
 - Go v1.16 or higher
 - The following Go packages:
   - github.com/machinebox/graphql
-  
+
 ## About
 
 Onchain Aggregator was created for the purpose of retrieving onchain data and storing it in a database. Currently, it only gathers data from Uniswap. 
