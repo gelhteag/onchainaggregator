@@ -32,8 +32,7 @@ Onchain Aggregator provides the following functions, which implement queries def
 
 ## About
 
-Onchain Aggregator was created for the purpose of retrieving onchain data and storing it in a database. Currently, it only gathers data from Uniswap. 
-However, this package may expand to include other blockchains and platforms in the future.
+Onchain Aggregator is a Go package that retrieves onchain data from the Uniswap smart contract and stores it in a database. The raw data will subsequently undergo transformation to extract meaningful information. At present, it only gathers data from Uniswap, but this package may expand to include other blockchains and platforms in the future.
 
 If you use this package, please provide a reference to the original source.
 
