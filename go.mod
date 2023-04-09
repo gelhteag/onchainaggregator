@@ -4,6 +4,7 @@ go 1.19
 
 require (
 	github.com/influxdata/influxdb-client-go/v2 v2.12.3
+	github.com/joho/godotenv v1.5.1
 	github.com/machinebox/graphql v0.2.2
 )
 
