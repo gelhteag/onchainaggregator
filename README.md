@@ -30,7 +30,7 @@ Token Data
 - QueryTokenData
 - QueryAllUniswapTokens
 - QueryTokenTransactions
-- Query
+- QueryTokenDailyData
 
 
 
