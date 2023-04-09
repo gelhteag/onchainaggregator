@@ -38,6 +38,7 @@ Token Data
 - Go v1.16 or higher
 - The following Go packages:
   - github.com/machinebox/graphql
+  - github.com/influxdata/influxdb-client-go/v2
 
 ## About
 
