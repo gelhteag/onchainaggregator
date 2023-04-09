@@ -5,7 +5,7 @@ Onchain Aggregator is a Go package that implements queries for uniswapV2, as def
 ## About The Graph
 
 [The Graph](https://thegraph.com/docs/en/about/) is a decentralized protocol for indexing and querying blockchain data. The Graph makes it possible to query data that is difficult to query directly. Projects with complex smart contracts like Uniswap store data on the Ethereum blockchain, making it really difficult to read anything other than basic data directly from the blockchain.
-The Graph solves this with a decentralized protocol that indexes and enables the performant and efficient querying of blockchain data. These APIs (indexed "subgraphs") can then be queried with a standard GraphQL API.https://thegraph.com/hosted-service/subgraph/uniswap/uniswap-v2
+The Graph solves this with a decentralized protocol that indexes and enables the performant and efficient querying of blockchain data. These APIs (indexed "subgraphs") can then be queried with a standard GraphQL API.
 
 To test subgraph queries, you can use the Uniswap v2 subgraph on the hosted service provided by The Graph, which can be accessed on the [playground](https://thegraph.com/hosted-service/subgraph/uniswap/uniswap-v2)
 
