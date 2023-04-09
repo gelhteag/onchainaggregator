@@ -334,7 +334,7 @@ func QueryPairDailyAggregated(args map[string]interface{}) (*[]PairDailyAggregat
 type TokenOverview struct {
 	Name           string `graphql:"name"`
 	Symbol         string `graphql:"symbol"`
-	Decimals       int    `graphql:"decimals"`
+	Decimals       string `graphql:"decimals"`
 	DerivedETH     string `graphql:"derivedETH"`
 	TradeVolumeUSD string `graphql:"tradeVolumeUSD"`
 	TotalLiquidity string `graphql:"totalLiquidity"`
@@ -393,6 +393,32 @@ type TokenTransactions struct {
 	Mints []*Mint `graphql:"mints"`
 	Burns []*Burn `graphql:"burns"`
 	Swaps []*Swap `graphql:"swaps"`
+}
+
+// Get a snapshot of the current stats on a token in Uniswap.
+// This query fetches current stats of the given Token.
+func QueryTokenOverview(tokenID string) (*TokenOverview, error) {
+	// Define a new instance of TokenOverview to store the response
+	queryStruct := &TokenOverview{}
+	// Generate the GraphQL query string from the TokenOverview struct
+	query := generateQueryFromStruct(queryStruct, "token", tokenID, nil)
+	tokenOverviewResponse, err := RunGraphQLQuery(query)
+	if err != nil {
+		log.Fatalf("Error executing GraphQL request: %v", err)
+	}
+	tokenOverview, ok := tokenOverviewResponse["token"].(map[string]interface{})
+	if !ok {
+		return nil, errors.New("unexpected response format")
+	}
+	tokenOverviewJSON, err := json.Marshal(tokenOverview)
+	if err != nil {
+		return nil, err
+	}
+	err = json.Unmarshal(tokenOverviewJSON, queryStruct)
+	if err != nil {
+		return nil, err
+	}
+	return queryStruct, nil
 }
 
 // QueryTokenData queries the Uniswap GraphQL API for data about a specific token on the Uniswap exchange. It
